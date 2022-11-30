@@ -11,7 +11,7 @@ def convertToHex(hexText, base, bitSize):
         binText = binText[3:] # removes the -0x from binary number
     binText = binText.zfill(bitSize) # makes it bitsize bits long
     return binText
-# makes all of s strings of hex
+# return a new state where all elements are in hex
 def stateToHex(s):
     temp =[0,0,0,0,0]
     temp[0] = hex(s[0])
@@ -31,6 +31,7 @@ def printState(s):
 # adds the constant to x2 of s
 def addConstant_a(s, num):
     s[2] = (s[2]) ^ int(CONSTANTS_a[num],16)
+# uses the implamentation from the document
 def sBox(s):
 
     s[0] ^= s[4]
@@ -69,6 +70,8 @@ def sBox(s):
     s[2] = ~s[2]
     
     #print("T's_3: ",(t0),t1,t2,t3,t4,"\nS:",s)
+
+# does not work. Tried to remove the ~ operator but did not work
 def sBox_test(s):
     
     s[0] ^= s[4]
@@ -104,13 +107,7 @@ def sBox_test(s):
     s[3] ^= s[2]
     s[2] ^= 1
     #print("T's_B: ",bin(t0),t1,t2,t3,t4,"\nS:",s)
-def shiftRbyn(bits, n):
-    #print("before shift", bin(bits))
-    #print(bin((bits) >> n))
-    #print(bin((bits) << (64-n)))
-    temp = (((bits) >> n) ^ ((bits) << (64-n)))
-    #print("after shift", bin(temp))
-    return temp
+#shifts the digits.
 def shiftRbyn_test(bits, n):
     #print("H: ",bits,n)
     binText = bin((bits))
