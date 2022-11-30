@@ -1,6 +1,6 @@
 # Ascon
 ## Program options
-I think that the issue I have is the sbox function. There are two differnent variations. One is called sbox and the other is called sbox_test. Sbox uses the software implementation that is in the documentation. The sbox_test does a similar operation but tries to remove the not operator from the operations. The issue with sbox is that it wants to use the ~ operater. However python does this operation in a incorrect format.
+I think that the issue I have is the sbox function. There are two differnent variations. One is called sbox and the other is called sbox_test. Sbox uses the software implementation that is in the documentation. The sbox_test does a similar operation but tries to remove the not operator from the operations (It does not work). The issue with sbox is that it wants to use the ~ operater. However python does this operation in a incorrect format.
 ## example
 we will take the binary number 10010100, which equals 148 and perform the not operator on it
 ### python code
