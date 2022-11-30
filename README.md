@@ -11,6 +11,6 @@ x =  148 binary= 0b10010100
 ### c++ code
 ```code
 x = 148 binary = 10010100
-x = -149 binary = 11111111111111111111111101101011
+~x = -149 binary = 11111111111111111111111101101011
 ```
 ~ is supposed to invert the binary digts and switch the binary digts, but it instead only adds 1 and puts a negative sign outfront. The not operater should operate like it does in c++ where each digit is inverted. 
