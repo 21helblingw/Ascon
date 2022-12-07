@@ -14,3 +14,12 @@ x = 148 binary = 10010100
 ~x = -149 binary = 11111111111111111111111101101011
 ```
 ~ is supposed to invert the binary digts and switch the binary digts, but it instead only adds 1 and puts a negative sign outfront. The not operater should operate like it does in c++ where each digit is inverted. 
+
+## Pyrhon output with sbox
+```code 
+-0x79bcec27c97d415c
+-0x15dda819619a93c7
+-0x386f962d50658cee
+-0x4424df23602e2cef
+0x1d685af43382dda5
+```
